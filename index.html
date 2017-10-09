@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 去重
+//    var str = [1,1,1,5,6,7];
+//    var newstr = [];
+//    function auto(str,newstr){
+//        for(var i = 0; i < str.length; i++)
+//        {
+//            if(newstr.indexOf(str[i]) == -1)
+//            {
+//                newstr.push(str[i])
+//            }
+//
+//        }
+//        return newstr;
+//    }
+    // 去重2
+    var str = [1,1,1,5,6,7];
+    var newstr = [];
+    function auto(str,newstr){
+        for(var i = 0; i < str.length; i++)
+        {
+            if(str[i]===str[i+1]){
+                delete str[i]
+            }else{
+                newstr.push(str[i])
+            }
+
+        }
+        return newstr;
+    }
+
+
+
+    console.log(auto(str,newstr));
+</script>
+</body>
+</html>
